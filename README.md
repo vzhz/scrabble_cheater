@@ -10,7 +10,8 @@ Requirements
 This program was built in [Python 2.7](https://www.python.org/download/releases/2.7/) but is not dependant on a specific release of Python.
 Installation
 ---------------
-To run, download Scrabble-cheater and the sowpods word list, navigate to the directory where they are stored and run <pre><code>python scrabble-cheater.py</code></pre>.
+To run, download Scrabble-cheater and the sowpods word list, navigate to the directory where they are stored and run <pre><code>python scrabble-cheater.py</code></pre>
+
 Author
 ----------
 Written by Veronica Hanus (@vzhz), who would love to hear about your experience with this program.  
