@@ -15,18 +15,19 @@ for i in f:
 
 #print sys.argv gives ['scrabble.py', '<whatever I typed after command in terminal>']
 rack = sys.argv[1].lower()
-if len(rack) !=8 or rack.isalpha() is False: #the "only letters" test doesn't work
-	print "Please rerun command and eight-letter rack to play."
+if len(rack) !=7 or rack.isalpha() is False: #the "only letters" test doesn't work
+	print "Please rerun command and seven-letter rack to play."
 	exit()
 
 #print type(valid_words[0]), valid_words[0]
 winning_words = []
 for word in valid_words:
-	rack_temp = rack
+	rack_temp = list(rack)
 	for letter in word:
 		if letter in rack_temp:
-			k = rack_temp.index(letter)
-			rack_temp = rack_temp[:k] + rack_temp[k+1:]
+			rack_temp.remove(letter)
+			#k = rack_temp.index(letter)
+			#rack_temp = rack_temp[:k] + rack_temp[k+1:]
 	if len(rack)-len(rack_temp)==len(word):
 		winning_words.append(word)
 
