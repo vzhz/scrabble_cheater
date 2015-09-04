@@ -15,7 +15,7 @@ for i in f:
 
 #print sys.argv gives ['scrabble.py', '<whatever I typed after command in terminal>']
 rack = sys.argv[1].lower()
-if len(rack) !=7 or rack.isalpha() is False: #the "only letters" test doesn't work
+if len(rack) !=7 or rack.isalpha() is False: #the "only letters" test doesn't work #also blanks
 	print "Please rerun command and seven-letter rack to play."
 	exit()
 
@@ -33,7 +33,7 @@ for word in valid_words:
 
 #winning_words_and_points = dictfromkeys(winning_words)
 #^(see above) http://stackoverflow.com/questions/20079681/initializing-a-dictionary-in-python-with-a-key-value-and-no-corresponding-values
-just_points_winning_words = []
+just_points_winning_words = [] #fcn but call in loop
 for word in winning_words:
 	points_word = 0
 	for letter in word:
@@ -42,6 +42,8 @@ for word in winning_words:
 			just_points_winning_words.append(points_word)
 	winning_words_and_points = dict(zip(winning_words, just_points_winning_words)) #http://stackoverflow.com/questions/8080890/initialize-dict-with-keys-values-from-two-list
 	#print winning_words_and_points
+	
+	#also recommend I look into list comprehensions
 
 #sorting dict by value so the words that give you the most points are listed first
 print "For the maxium points, spell this word: " + max(winning_words_and_points, key=winning_words_and_points.get)
