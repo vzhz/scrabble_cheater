@@ -33,10 +33,7 @@ def add_points_word(word):
             points_word += scores[letter]
     return points_word
 
-just_points_winning_words = []
-for word in winning_words:
-    points_word = add_points_word(word)
-    just_points_winning_words.append(points_word)
+just_points_winning_words = [add_points_word(word) for i in winning_words]
 
 winning_words_and_points = dict(zip(winning_words, just_points_winning_words))
 
