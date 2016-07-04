@@ -30,6 +30,7 @@ for word in valid_words:
 			#rack_temp = rack_temp[:k] + rack_temp[k+1:]
 	if len(rack)-len(rack_temp)==len(word):
 		winning_words.append(word)
+print winning_words
 
 #winning_words_and_points = dictfromkeys(winning_words)
 #^(see above) http://stackoverflow.com/questions/20079681/initializing-a-dictionary-in-python-with-a-key-value-and-no-corresponding-values
@@ -39,11 +40,14 @@ for word in winning_words:
 	for letter in word:
 		if letter in scores: #scores letters are strings might need to split the words in valid words into their individual letters
 			points_word += scores[letter]
-			just_points_winning_words.append(points_word)
-	winning_words_and_points = dict(zip(winning_words, just_points_winning_words)) #http://stackoverflow.com/questions/8080890/initialize-dict-with-keys-values-from-two-list
-	#print winning_words_and_points
-	
+	just_points_winning_words.append(points_word)
+#	print points_word
+print just_points_winning_words
+
+winning_words_and_points = dict(zip(winning_words, just_points_winning_words)) #http://stackoverflow.com/questions/8080890/initialize-dict-with-keys-values-from-two-list
+print winning_words_and_points
+
 	#also recommend I look into list comprehensions
 
 #sorting dict by value so the words that give you the most points are listed first
-print "For the maxium points, spell this word: " + max(winning_words_and_points, key=winning_words_and_points.get)
+print "For the maximum points, spell this word: " + max(winning_words_and_points, key=winning_words_and_points.get)
