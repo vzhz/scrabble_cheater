@@ -7,7 +7,8 @@ Surprise your friends by maximizing your points on your first round of [Scrabble
 
 Requirements
 --------------------
-This program was built in [Python 2.7](https://www.python.org/download/releases/2.7/) but is not dependant on a specific release of Python.
+This program was built in [Python 2.7](https://www.python.org/download/releases/2.7/) and requires Python 2.2 to 3.0 to run.
+
 Installation
 ---------------
 To run, download scrabble-cheater.py and the sowpods.txt word list, navigate to the directory where they are stored and run <pre><code>python scrabble-cheater.py \<your 7-letter rack\> </code></pre>
