@@ -13,7 +13,7 @@ for i in f:
     valid_words.append(i.lower())
 
 rack = sys.argv[1].lower()
-if len(rack) !=7 or rack.isalpha() is False: #the "only letters" test doesn't work #also blanks
+if len(rack) !=7 or rack.isalpha() == False: #the "only letters" test doesn't work #also blanks
 print "Please rerun command and seven-letter rack to play."
 exit()
 
